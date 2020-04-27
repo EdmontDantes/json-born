@@ -46,25 +46,27 @@ if (process.argv[2] === 'POST' && process.argv[3] === 'user' && process.argv[4] 
         }
 
         const userJsonRead = JSON.parse(data);
-        // console.log(userJsonRead);
-        
-        const userJsonWriteObj = {
-            index: userJsonRead[userJsonRead.length -1].index + 1,
-            age: Number(process.argv[5]),
-            eyeColor: process.argv[6],
-            name: process.argv[4]
-            
-        };
-
-        userJsonRead.push(userJsonWriteObj);
         console.log(userJsonRead);
-        const backToJson = JSON.stringify(userJsonRead);
+        
+        // const userJsonWriteObj = {
+        //     name: process.argv[5],
+        //     age: process.argv[6],
+        //     eyeColor: process.argv[7]
+            
+        // };
 
-        fs.writeFile('./users.json', backToJson, function(error) {
-            if (error !== null) {
-                throw error;
-            }
-        });
+        // userJsonReadForIndexNeeded.push(userJsonWriteObj);
+        // console.log(userJsonReadForIndexNeeded);
+        // const backToJson = JSON.stringify(userJsonReadForIndexNeeded);
+
+        // fs.writeFile('./users.json', backToJson, function(error) {
+        //     if (error !== null) {
+        //         throw error;
+        //     }
+        // });
+
+
+        // const userJsonCanIgetItBack = JSON.parse(data);
 
     });
 }

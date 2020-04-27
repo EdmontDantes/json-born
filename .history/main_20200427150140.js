@@ -58,13 +58,16 @@ if (process.argv[2] === 'POST' && process.argv[3] === 'user' && process.argv[4] 
 
         userJsonRead.push(userJsonWriteObj);
         console.log(userJsonRead);
-        const backToJson = JSON.stringify(userJsonRead);
+        const backToJson = JSON.stringify(userJsonReadForIndexNeeded);
 
-        fs.writeFile('./users.json', backToJson, function(error) {
-            if (error !== null) {
-                throw error;
-            }
-        });
+        // fs.writeFile('./users.json', backToJson, function(error) {
+        //     if (error !== null) {
+        //         throw error;
+        //     }
+        // });
+
+
+        // const userJsonCanIgetItBack = JSON.parse(data);
 
     });
 }
